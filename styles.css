@@ -32,3 +32,10 @@ li {
 .weekDays {
   padding-top: 1.25rem;
 }
+
+.grid {
+
+  display: grid;
+  grid-template-columns: repeat(7, 1fr)
+  
+}
