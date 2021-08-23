@@ -1,0 +1,34 @@
+* {
+  box-sizing: border-box;
+  margin: auto;
+}
+
+body {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 20px;
+}
+
+.header {
+  background: darkgreen;
+  min-height: 3.125rem;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+li {
+  list-style-type: none;
+}
+
+.calendar {
+  margin-top: 5rem;
+  background: chartreuse;
+  text-align: center;
+  padding-top: 1.25rem;
+}
+
+.weekDays {
+  padding-top: 1.25rem;
+}
