@@ -34,8 +34,24 @@ li {
 }
 
 .grid {
-
   display: grid;
-  grid-template-columns: repeat(7, 1fr)
-  
+  grid-template-columns: repeat(7, 1fr);
+}
+
+.calendarDays {
+  border: 2px solid black;
+}
+.days {
+  width: 3.125rem;
+  height: 3.125rem;
+}
+
+.add-event {
+  margin-bottom: 1.25rem;
+  background-color: darkgreen;
+  border: 2px solid yellow;
+  height: 30px;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
 }

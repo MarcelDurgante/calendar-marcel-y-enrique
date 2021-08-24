@@ -17,10 +17,11 @@
     </header>
     <main>
       <div class="calendar">
+        <button class="add-event">New Event</button>
         <div class="controllers flex">
-        <div class="preDate"><</div>
-        <div class="control" id="controllers"><- 03 Junio 1991 -</div>
-        <div class="posDate">></div>
+        <button class="preDate" id="preDate"><</button>
+        <div class="control" id="controllers"></div>
+        <button class="posDate" id="posDate">></button>
         </div>
         <div class="weekDays flex">
           <div class="weekDay">Mon</div>
@@ -31,7 +32,7 @@
           <div class="weekDay">Sat</div>
           <div class="weekDay">Sun</div>
         </div>
-        <div class="calendarDays grid">
+        <div class="calendarDays grid" id="calendarDays">
           <div class="days">1</div>
           <div class="days">2</div>
           <div class="days">3</div>
