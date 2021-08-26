@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Calendar</title>
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   </head>
   <body>
     <header class="header">
@@ -17,7 +18,7 @@
     </header>
     <main>
       <div class="calendar">
-        <button class="add-event">New Event</button>
+        <button class="add-event" id="newEvent">New Event</button>
         <div class="controllers flex">
         <button class="preDate" id="preDate"><</button>
         <div class="control" id="controllers"></div>
@@ -68,6 +69,65 @@
       </div>
       </div>
     </main>
+    <div class="modal" id="modal">
+      <div class="modal-content">
+        <i class="fas fa-window-close close-btn" id="closeBtn"></i>
+        <form>
+          <div>
+            <label for="title"><i class="far fa-calendar-alt"></i></label>
+            <input type="text" id="title" placeholder="Event Title">
+          </div>
+
+          <div>
+            <label for="title"><i class="far fa-calendar-alt"></i></label>
+            <input type="date" id="title" placeholder="Event Title">
+            <input type="time" id="title" placeholder="Event Title">
+          </div>
+
+          <div>
+            <label for="endDate">End Date</label>
+            <input type="checkbox" id="endDate" placeholder="Event Title">
+          </div>
+
+          <div class="endDate" id="chooseEndDate">
+            <label for="title"><i class="far fa-calendar-alt"></i></label>
+            <input type="date"  placeholder="Event Title">
+            <input type="time"  placeholder="Event Title">
+          </div>
+
+          <div>
+            <label for="reminder">Reminder</label>
+            <input type="checkbox" id="reminder" placeholder="Event Title">
+          </div>
+
+          <div class="remind" id="chooseRemind">
+            <select name="reminder">
+              <option value="1">1 minute</option>
+              <option value="5">5 minutes</option>
+              <option value="10">10 minutes</option>
+              <option value="15">15 minutes</option>
+              <option value="30">30 minutes</option>
+              <option value="60">1 hour</option>
+            </select>
+          </div>
+          <div>
+            <textarea name="description" id="eventDescription" cols="30" rows="5"></textarea>
+          </div>
+          <div>
+            <select name="event-type" id="eventType">
+              <option value="Meeting">Meeting</option>
+              <option value="Call">Call</option>
+              <option value="Personal">Personal</option>
+            </select>
+          </div>
+          <div>
+            <button id="cancel">Cancel</button>
+            <button>Save</button>
+          </div>
+        </form>
+      </div>
+    </div>
     <script src="main.js"></script>
   </body>
+ 
 </html>
