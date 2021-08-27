@@ -5,6 +5,7 @@ let currentYear = today.getFullYear();
 let currentMonth = today.getMonth();
 let currentDate = today.getDay();
 let currentDay = today.getDate();
+let weekDaysDisplay = document.getElementById("weekDays");
 
 const months = [
   "January",
@@ -20,6 +21,8 @@ const months = [
   "November",
   "December",
 ];
+
+const weekDays = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
 
 // ------ VARIABLES FOR ARROWS -----
 
@@ -104,8 +107,30 @@ reminder.addEventListener("change", () => {
   }
 });
 
+// ------- BRUCE IS PRINTING WEEKDAYS -----
+
+weekDays.forEach((day) => {
+  let weekDay = document.createElement("div");
+  weekDay.innerHTML = day;
+  weekDaysDisplay.appendChild(weekDay);
+});
+
 // ------- BRUCE IS PRINTING DAYS -----
 
 let calendarDays = document.getElementById("calendarDays");
 let startDate = new Date(currentYear, currentMonth, 1);
+console.log(startDate);
+
+let whatWeNeed = weekDays.indexOf(startDate);
+console.log(whatWeNeed);
+
 let daysQuantity = new Date(currentYear, currentMonth + 1, 0).getDate();
+
+function renderCalendar() {
+  for (let monthDay = 1; monthDay <= daysQuantity; monthDay++) {
+    let newDiv = document.createElement("div");
+    newDiv.innerHTML = [monthDay];
+    calendarDays.appendChild(newDiv);
+  }
+}
+renderCalendar();
